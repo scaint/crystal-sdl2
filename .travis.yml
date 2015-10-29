@@ -1,5 +1,8 @@
 language: crystal
 sudo: required
+before_install:
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
 install:
 - sudo add-apt-repository ppa:team-xbmc/ppa -y
 - sudo apt-get update -q
